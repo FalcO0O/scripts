@@ -8,6 +8,7 @@ A collection of configuration, installation, and utility scripts for Linux syste
 
 | Module | Purpose | Key Tech | Documentation |
 |---|---|---|---|
+| **[ai-setup](ai-setup/)** | Prevents unwanted default AI agent behaviors by enforcing baseline rules. | Markdown, System Instructions | [ai-setup/README.md](ai-setup/README.md) |
 | **[wifi-fix](wifi-fix/)** | Fixes Raspberry Pi headless access issues. Provides an instant direct Ethernet cable connection (`10.42.0.1` / mDNS) and prevents Wi-Fi sleep/dropouts. | NetworkManager, systemd timers, RFKill, iw | [wifi-fix/README.md](wifi-fix/README.md) |
 | **[wfb-ng](wfb-ng/)** | Installer and tooling for a long-range bidirectional digital radio link (air ↔ ground station). Carries MAVLink, SSH tunnel, and RTSP/WebRTC video. | WFB-ng, RTL8812EU (raw 802.11 monitor injection), WebRTC, MAVLink | [wfb-ng/README.md](wfb-ng/README.md) |
 | **[ssh-setup](ssh-setup/)** | Configures SSH key authentication and host aliases (`~/.ssh/config`) from your PC to a Raspberry Pi. Works on Windows and Linux. | OpenSSH, Ed25519, `ssh-copy-id`, `~/.ssh/config` | [ssh-setup/README.md](ssh-setup/README.md) |
@@ -19,11 +20,22 @@ A collection of configuration, installation, and utility scripts for Linux syste
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/AGH-Drone-Engineering/scripts.git
+git clone https://github.com/FalcO0O/scripts.git
 cd scripts
 ```
 
 ### 2. Choose your module
+
+- **AI Assistant Rules & Setup:**
+  Deploys baseline rules globally or into a local project to prevent unwanted default AI agent behaviors.
+
+  Run from the cloned repository:
+  ```bash
+  cd ai-setup
+  bash setup.sh       # Linux
+  .\setup.ps1         # Windows (PowerShell)
+  ```
+  *(Details, target paths & copy-paste blocks: [ai-setup/README.md](ai-setup/README.md))*
 
 - **SSH Key & Client Alias Setup (Run on your computer / laptop):**
   Sets up an Ed25519 key, deploys it to the Raspberry Pi, and configures an alias in `~/.ssh/config` for passwordless.
