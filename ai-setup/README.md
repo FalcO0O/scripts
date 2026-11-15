@@ -19,15 +19,7 @@ Setup scripts and rules for AI assistants.
 
 Run the script and choose whether to install globally or locally.
 
-### Run directly from repository
-
-```bash
-cd ai-setup
-.\setup.ps1     # Windows (PowerShell)
-bash setup.sh   # Linux / macOS
-```
-
-### Run directly in terminal (without cloning)
+### 1. Run directly in terminal (without cloning)
 
 #### Windows (PowerShell)
 
@@ -39,4 +31,12 @@ irm https://raw.githubusercontent.com/FalcO0O/scripts/master/ai-setup/setup.ps1 
 
 ```bash
 curl -fsSL https://raw.githubusercontent.com/FalcO0O/scripts/master/ai-setup/setup.sh | bash
+```
+
+### 2. Run from cloned repository
+
+```bash
+cd ai-setup
+.\setup.ps1     # Windows (PowerShell)
+bash setup.sh   # Linux / macOS
 ```
