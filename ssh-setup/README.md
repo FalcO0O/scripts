@@ -10,7 +10,30 @@ Automated setup of SSH key authentication for connecting to your Raspberry Pi.
 
 Interactive prompts will ask for the Pi's username (default: `pi`) and target hostname/IP (default: `raspberry.local`). Press `Enter` to accept defaults.
 
-### Paste directly into terminal
+### 1. Run directly in terminal (without cloning)
+
+#### Windows (PowerShell)
+
+```powershell
+irm https://raw.githubusercontent.com/FalcO0O/scripts/master/ssh-setup/setup.ps1 | iex
+```
+
+#### Linux / macOS (Bash)
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/FalcO0O/scripts/master/ssh-setup/setup.sh | bash
+```
+
+### 2. Run from cloned repository
+
+```bash
+cd ssh-setup
+.\setup.ps1     # Windows (PowerShell)
+bash setup.sh   # Linux / macOS
+```
+
+<details>
+<summary>Manual script blocks (offline / copy-paste without downloading)</summary>
 
 #### Windows (PowerShell)
 
@@ -123,18 +146,7 @@ printf '\n[+] Done! Key login verified. Connect using: ssh %s\n' "$a"
 )
 ```
 
----
-
-### Running from files (if repository is cloned)
-
-- **Linux:**
-  ```bash
-  bash setup.sh
-  ```
-- **Windows (PowerShell):**
-  ```powershell
-  .\setup.ps1
-  ```
+</details>
 
 ---
 
